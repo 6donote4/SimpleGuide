@@ -1,43 +1,69 @@
-<!docemt>
-<meta charset="utf-8">
+<!DOCTYPE html>
 <html>
-	<link rel="stylesheet" type="text/css" href="./css/table.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" >
+        <script type="text/javascript" src="js/jquery-3.6.0.min.js">
+        </script>
+        <script type="text/javascript" src="js/bootstrap.min.js">
+        </script>
+    </head>
+    <title>导航测试</title>
     <body>
-    <div style="margin-left: 10px;"><h1>本地简易站点导航</h1></div>
-    <div style="margin-left: 25px;"><h4>本地导航</h4></div>
-    <table class="DirectTable">
-		<tr>
-			<td class="DirectTD DirectTableTitles">站点</th>
-			<td class="DirectTD DirectTableTitles">描述</th>
-			<td class="DirectTD DirectTableTitles">当前状态</th>
-		</tr>
-		<tr>
-			<td class="DirectTD"><div class="DirectTableSubTitles"><a href="../webui" >Aria2 WebUI</a></div></td>
-			<td class="DirectTD"><div class="DirectInfo">Aria2 Web 界面--远程下载工具</div></td>
-			<td class="DirectTD DirectSignRunning">运行中</td>
-		</tr>
-		<tr>
-			<td class="DirectTD"><div class="DirectTableSubTitles"><a href="../AriaNg" >AriaNg 界面</a></div></td>
-			<td class="DirectTD"><div class="DirectInfo">Aria2 Web 界面--远程下载工具</div></td>
-			<td class="DirectTD DirectSignRunning">运行中</td>
-		</tr>
-		<tr>
-			<td class="DirectTD"><div class="DirectTableSubTitles"><a href="../hfs" >HTTP 文件服务器</a></div></td>
-			<td class="DirectTD"><div class="DirectInfo">HTTP 文件服务</div></td>
-			<td class="DirectTD DirectSignRunning">运行中</td>
-		</tr>
-		<tr>
-			<td class="DirectTD"><div class="DirectTableSubTitles"><a href="../yaaw" >yaaw 界面</a></div></td>
-			<td class="DirectTD"><div class="DirectInfo">Aria2 Web 界面--远程下载工具</div></td>
-			<td class="DirectTD DirectSignRunning">运行中</td>
-		</tr>
-
-
-        </table>
-        <h5>OpenWRT Web转发端口  :18080<br>
-            OpenWRT SSH转发端口  :12200<br>
-            AsusBox BtSync端口   :8888<br>
-            <br>
-        </h5>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">导航首页</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">首页</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.donote.tk">我的博客</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            本地导航
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/webui">Aria2 Webui</a></li>
+            <li><a class="dropdown-item" href="/AriaNg">AriaNg</a></li>
+            <li><a class="dropdown-item" href="/yaaw">yaaw Aria2</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="/hfs">HTTP 文件服务</a></li>
+            <li><a class="dropdown-item" href="/home">HOME目录</a></li>
+            <li><a class="dropdown-item" href="http://somehost">BtSync文件同步</a></li>
+            <li><a class="dropdown-item" href="http://somehost">福利视频站</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            远程导航
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="http://somehost">AriaNg</a></li>
+            <li><a class="dropdown-item" href="http://somehost">Aria2 WebUI</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="http://somehost">导航页</a></li>
+            <li><a class="dropdown-item" href="http://somehost">OpenWRT</a></li>
+            <li><a class="dropdown-item" href="http://somehost">远程福利视频站</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="false">Enabled</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
     </body>
 </html>
+
