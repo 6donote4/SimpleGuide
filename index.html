@@ -3,11 +3,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" >
-        <script type="text/javascript" src="js/jquery-3.6.0.min.js">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <script type="text/javascript">
+                function createLinks(transType,appProtocol,AppNameOrPort,Description){
+                        if (transType == "localAddr"){
+                            var str = appProtocol + location.hostname + AppNameOrPort;
+                                    }
+                        if(transType == "remoteAddr"){
+                            var str = appProtocol + AppNameOrPort;
+                                    }
+                    var labelStart = "<a class="+"dropdown-item"+" href=";
+                    var labelEnd = "</a>";
+                    var fullLink = labelStart + str + ">" + Description + labelEnd;
+                    document.write(fullLink);
+                            }
         </script>
-        <script type="text/javascript" src="js/bootstrap.min.js">
-        </script>
+        <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
     </head>
     <title>导航测试</title>
     <body>
@@ -30,14 +42,15 @@
             本地导航
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/webui">Aria2 Webui</a></li>
-            <li><a class="dropdown-item" href="/AriaNg">AriaNg</a></li>
-            <li><a class="dropdown-item" href="/yaaw">yaaw Aria2</a></li>
+            <li><script type="text/javascript">createLinks("localAddr","http://","/webui","Aria2 WebUI");</script></li>
+            <li><script type="text/javascript">createLinks("localAddr","http://","/AriaNg","AriaNg");</script></li>
+            <li><script type="text/javascript">createLinks("localAddr","http://","/yaaw","yaaw Aria2");</script></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/hfs">HTTP 文件服务</a></li>
-            <li><a class="dropdown-item" href="/home">HOME目录</a></li>
-            <li><a class="dropdown-item" href="http://somehost">BtSync文件同步</a></li>
-            <li><a class="dropdown-item" href="http://somehost">福利视频站</a></li>
+            <li><script type="text/javascript">createLinks("localAddr","http://","/hfs","HTTP 文件服务");</script></li>
+            <li><script type="text/javascript">createLinks("localAddr","http://","/home","HOME目录");</script></li>
+            <li> <script type="text/javascript">createLinks("localAddr","http://","#","BtSync文件同步服务");</script></li>
+            <li> <script type="text/javascript">createLinks("localAddr","http://",":#","vmOpenWrt");</script></li>
+            <li> <script type="text/javascript">createLinks("localAddr","http://","#","i2p Router Manager");</script></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -45,12 +58,14 @@
             远程导航
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="http://somehost">AriaNg</a></li>
-            <li><a class="dropdown-item" href="http://somehost">Aria2 WebUI</a></li>
+            <li><script type="text/javascript">createLinks("remoteAddr","https://","www.donote.tk/","AriaNg");</script></li>
+            <li><script type="text/javascript">createLinks("remoteAddr","https://","www.donote.tk/","Aria2 WebUI");</script></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="http://somehost">导航页</a></li>
-            <li><a class="dropdown-item" href="http://somehost">OpenWRT</a></li>
-            <li><a class="dropdown-item" href="http://somehost">远程福利视频站</a></li>
+            <li><script type="text/javascript">createLinks("remoteAddr","https://","www.donote.tk/","远程导航页");</script></li>
+            <li><script type="text/javascript">createLinks("remoteAddr","https://","www.donote.tk/","OpenWRT");</script></li>
+            <li><script type="text/javascript">createLinks("remoteAddr","https://","www.donote.tk/","论坛测试");</script></li>
+            <li><script type="text/javascript">createLinks("remoteAddr","https://","6donote4.github.io","我的GitHub博客");</script></li>
+            <li><script type="text/javascript">createLinks("remoteAddr","https://","github.com/6donote4","我的GitHub页面");</script></li>
           </ul>
         </li>
         <li class="nav-item">
